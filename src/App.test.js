@@ -5,7 +5,5 @@ test('renders learn react link', () => {
   const { getByText } = render(
     <App />
   );
-  
   expect(getByText('hello world!'));
-  // console.log(getByText('hello world!'));
 });
