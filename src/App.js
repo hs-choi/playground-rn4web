@@ -6,7 +6,8 @@ const styles = StyleSheet.create({
     height: '100%'
   },
   appText: {
-    margin: 'auto'
+    margin: 'auto',
+    fontSize: '30px'
   }
 });
 
