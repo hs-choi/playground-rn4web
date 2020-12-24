@@ -1,5 +1,8 @@
 import React from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
+import { Provider } from 'react-redux';
+import store from "./store";
+import First from './component/First';
 
 const styles = StyleSheet.create({
   app: {
@@ -13,9 +16,9 @@ const styles = StyleSheet.create({
 
 const App = () => {
   return (
-    <View style={styles.app}>
-      <Text style={styles.appText}>hello world!</Text>
-    </View>
+    <Provider store={store}>
+      <First />
+    </Provider>
   );
 };
 
