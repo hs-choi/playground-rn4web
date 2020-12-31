@@ -13,22 +13,18 @@ const styles = StyleSheet.create({
   }
 });
 
-const First = () => {
-  const dispatch = useDispatch();
-  const stateMsg = useSelector(state => {
-    // console.log(state);
-    return state.firstMsg
-  });
+const Renders = (props) => {
+  const { onChange, testText } = props;
   // console.log(stateMsg);
   return (
     <View style={styles.app}>
-      <Text style={styles.appText}>{stateMsg}</Text>
+      <Text style={styles.appText}>{testText}</Text>
       <Button
         title="change"
-        onPress={() => dispatch(chageText())}
+        onPress={onChange}
       >change</Button>
     </View>
   );
 };
 
-export default First;
+export default Renders;
